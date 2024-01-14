@@ -1,4 +1,4 @@
-import { spawn, SpawnOptions } from "bun";
+import { spawn, type SpawnOptions } from "bun";
 import { expect, test } from "bun:test";
 
 const ANSWER =
