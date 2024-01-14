@@ -8,8 +8,8 @@ const handler = (
   { cmds, ...options }: { cmds: string[] } & SpawnOptions.OptionsObject,
 ) =>
 async () => {
-  const proc = spawn(cmds, options);
-  const output = await new Response(proc.stdout).text();
+  const { stdout } = spawn(cmds, options);
+  const output = await new Response(stdout).text();
   expect(output.trim()).toMatch(ANSWER);
 };
 
