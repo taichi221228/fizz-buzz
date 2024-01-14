@@ -17,3 +17,8 @@ test(
   "TypeScript",
   handler({ cmds: ["bun", "index.ts"], cwd: "../typescript" }),
 );
+
+test(
+  "Haskell",
+  handler({ cmds: ["runghc", "index.hs"], cwd: "../haskell" }),
+);
