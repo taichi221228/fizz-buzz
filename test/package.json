@@ -1,6 +1,6 @@
 {
   "name": "test",
-  "module": "index.ts",
+  "module": "index.test.ts",
   "type": "module",
   "devDependencies": {
     "bun-types": "latest"
