@@ -1,4 +1,4 @@
-import { spawn, SpawnOptions, Subprocess } from "bun";
+import { spawn, SpawnOptions } from "bun";
 import { expect, test } from "bun:test";
 
 const ANSWER =
@@ -6,13 +6,12 @@ const ANSWER =
 
 const handler = (
   spawnArgs: { cmds: string[] } & SpawnOptions.OptionsObject,
-) => {
-  return async () => {
-    const { cmds, ...options } = spawnArgs;
-    const proc = spawn(cmds, options);
-    const output = await new Response(proc.stdout).text();
-    expect(output.trim()).toMatch(ANSWER);
-  };
+) =>
+async () => {
+  const { cmds, ...options } = spawnArgs;
+  const proc = spawn(cmds, options);
+  const output = await new Response(proc.stdout).text();
+  expect(output.trim()).toMatch(ANSWER);
 };
 
 test(
