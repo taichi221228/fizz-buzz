@@ -1,4 +1,4 @@
-# test
+# fizz-buzz
 
 To install dependencies:
 
