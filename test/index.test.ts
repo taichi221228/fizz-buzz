@@ -19,6 +19,11 @@ test(
 );
 
 test(
+  "Lisp",
+  handler({ cmds: ["clisp", "index.lisp"], cwd: "../lisp" }),
+);
+
+test(
   "Haskell",
   handler({ cmds: ["runghc", "index.hs"], cwd: "../haskell" }),
 );
