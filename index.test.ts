@@ -15,15 +15,15 @@ async () => {
 
 test(
   "TypeScript",
-  handler({ cmds: ["bun", "index.ts"], cwd: "../typescript" }),
+  handler({ cmds: ["bun", "index.ts"], cwd: "typescript" }),
 );
 
 test(
   "Lisp",
-  handler({ cmds: ["clisp", "index.lisp"], cwd: "../lisp" }),
+  handler({ cmds: ["clisp", "index.lisp"], cwd: "lisp" }),
 );
 
 test(
   "Haskell",
-  handler({ cmds: ["runghc", "index.hs"], cwd: "../haskell" }),
+  handler({ cmds: ["runghc", "index.hs"], cwd: "haskell" }),
 );

@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "fizz-buzz",
   "module": "index.test.ts",
   "type": "module",
   "devDependencies": {
