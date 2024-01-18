@@ -25,5 +25,5 @@ test(
 
 test(
   "Haskell",
-  handler({ cmds: ["runghc", "index.hs"], cwd: "haskell" }),
+  handler({ cmds: ["runghc", "main.hs"], cwd: "haskell" }),
 );
