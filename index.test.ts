@@ -20,7 +20,7 @@ test(
 
 test(
   "Lisp",
-  handler({ cmds: ["clisp", "index.lisp"], cwd: "lisp" }),
+  handler({ cmds: ["clisp", "main.lisp"], cwd: "lisp" }),
 );
 
 test(
