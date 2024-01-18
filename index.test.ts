@@ -27,3 +27,8 @@ test(
   "Haskell",
   handler({ cmds: ["runghc", "main.hs"], cwd: "haskell" }),
 );
+
+test(
+  "Rust",
+  handler({ cmds: ["./rust/target/debug/fizz-buzz"]}),
+);
