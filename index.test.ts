@@ -21,4 +21,6 @@ test("Lisp", handler({ cmds: ["clisp", "lisp/fizz-buzz.lisp"] }));
 
 test("Haskell", handler({ cmds: ["runghc", "haskell/fizz-buzz.hs"] }));
 
+test("Nim", handler({cmds: ["./nim/fizzBuzz"]}));
+
 test("Rust", handler({ cmds: ["./rust/target/debug/fizz-buzz"] }));
