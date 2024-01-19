@@ -14,6 +14,11 @@ async () => {
 };
 
 test(
+  "JavaScript",
+  handler({ cmds: ["bun", "javascript/index.js"] }),
+);
+
+test(
   "TypeScript",
   handler({ cmds: ["bun", "typescript/index.ts"] }),
 );
