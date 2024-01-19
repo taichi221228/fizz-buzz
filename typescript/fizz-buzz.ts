@@ -1,8 +1,10 @@
-[...Array(100)].forEach((_, i) => {
-  const n = i + 1;
+type FizzBuzz = (n: number) => string;
 
-  if (n % 3 === 0 && n % 5 === 0) console.log("FizzBuzz");
-  else if (n % 3 === 0) console.log("Fizz");
-  else if (n % 5 === 0) console.log("Buzz");
-  else console.log(n);
-});
+const fizzBuzz: FizzBuzz = (n) => {
+  if (n % 3 === 0 && n % 5 === 0) return "FizzBuzz";
+  else if (n % 3 === 0) return "Fizz";
+  else if (n % 5 === 0) return "Buzz";
+  else return n + "";
+};
+
+[...Array(100).keys()].forEach((i) => console.log(fizzBuzz(i + 1)));
