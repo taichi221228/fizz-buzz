@@ -14,14 +14,14 @@ async () => {
   expect(output.trim()).toMatch(ANSWER);
 };
 
-test("JavaScript", handler(["bun", "javascript/fizz-buzz.js"]));
+test("JavaScript", handler(["bun", "javascript/index.js"]));
 
-test("TypeScript", handler(["bun", "typescript/fizz-buzz.ts"]));
+test("TypeScript", handler(["bun", "typescript/index.ts"]));
 
-test("Lisp", handler(["clisp", "lisp/fizz-buzz.lisp"]));
+test("Lisp", handler(["clisp", "lisp/main.lisp"]));
 
-test("Haskell", handler(["runghc", "haskell/fizz-buzz.hs"]));
+test("Haskell", handler(["runghc", "haskell/main.hs"]));
 
-test("Nim", handler(["./nim/fizzBuzz"]));
+test("Nim", handler(["./nim/fizz-buzz"]));
 
 test("Rust", handler(["./rust/target/debug/fizz-buzz"]));
