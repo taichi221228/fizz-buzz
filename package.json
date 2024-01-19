@@ -9,8 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "nim c -o:nim/fizz-buzz --verbosity:0 nim/main.nim & (cd rust && cargo build > /dev/null 2>&1) & pwd",
-    "test": "bun run build && bun test",
+    "build": "nim c -o:nim/fizz-buzz --verbosity:0 nim/main.nim & (cd rust && cargo build) & pwd",
     "format": "deno fmt * --ignore=node_modules"
   }
 }
