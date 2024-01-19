@@ -1,13 +1,9 @@
-loop 101 = return ()
-loop n = do
-  if n `mod` 3 == 0 && n `mod` 5 == 0
-    then putStrLn "FizzBuzz"
-  else if n `mod` 3 == 0
-    then putStrLn "Fizz"
-  else if n `mod` 5 == 0
-    then putStrLn "Buzz"
-  else
-    print n
-  loop (n + 1)
+fizzBuzz :: Int -> String
+fizzBuzz i
+  | i `mod` 15 == 0 = "FizzBuzz"
+  | i `mod` 3 == 0 = "Fizz"
+  | i `mod` 5 == 0 = "Buzz"
+  | otherwise = show i
 
-main = loop 1
+main :: IO ()
+main = mapM_ (putStrLn . fizzBuzz) [1..100]
