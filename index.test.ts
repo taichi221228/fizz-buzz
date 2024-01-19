@@ -13,12 +13,12 @@ async () => {
   expect(output.trim()).toMatch(ANSWER);
 };
 
-test("JavaScript", handler({ cmds: ["bun", "javascript/index.js"] }));
+test("JavaScript", handler({ cmds: ["bun", "javascript/fizz-buzz.js"] }));
 
-test("TypeScript", handler({ cmds: ["bun", "typescript/index.ts"] }));
+test("TypeScript", handler({ cmds: ["bun", "typescript/fizz-buzz.ts"] }));
 
-test("Lisp", handler({ cmds: ["clisp", "lisp/main.lisp"] }));
+test("Lisp", handler({ cmds: ["clisp", "lisp/fizz-buzz.lisp"] }));
 
-test("Haskell", handler({ cmds: ["runghc", "haskell/main.hs"] }));
+test("Haskell", handler({ cmds: ["runghc", "haskell/fizz-buzz.hs"] }));
 
 test("Rust", handler({ cmds: ["./rust/target/debug/fizz-buzz"] }));
