@@ -1,14 +1,14 @@
 fn main() {
-    let mut count = 0;
+    let mut i = 1;
 
     loop {
-        count +=  1;
+        if i % 3 == 0 && i % 5 == 0 { println!("FizzBuzz") }
+        else if i % 5 == 0 { println!("Buzz") }
+        else if i % 3 == 0 { println!("Fizz") }
+        else { println!("{}", i) }
 
-        if count % 3 == 0 && count % 5 == 0 { println!("FizzBuzz") }
-        else if count % 5 == 0 { println!("Buzz") }
-        else if count % 3 == 0 { println!("Fizz") }
-        else { println!("{}", count) }
+        if i == 100 { break }
 
-        if count == 100 { break }
+        i += 1;
     }
 }
