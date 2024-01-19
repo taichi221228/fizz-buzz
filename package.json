@@ -7,5 +7,10 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "nim c --verbosity:0 nim/fizzBuzz.nim & (cd rust && cargo build) & pwd",
+    "test": "bun run build && bun test",
+    "format": "deno fmt * --ignore=node_modules"
   }
 }
