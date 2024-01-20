@@ -25,3 +25,5 @@ test("Haskell", handler(["runghc", "haskell/main.hs"]));
 test("Nim", handler(["./nim/nim"]));
 
 test("Rust", handler(["./rust/target/debug/rust"]));
+
+test("Zig", handler(["./zig/zig-out/bin/zig"]));
