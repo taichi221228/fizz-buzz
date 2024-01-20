@@ -1,24 +1,26 @@
 const std = @import("std");
 
-pub fn main() !void {
-    // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
-    std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
-
-    // stdout is for the actual output of your application, for example if you
-    // are implementing gzip, then only the compressed bytes should be sent to
-    // stdout, not any debugging messages.
-    const stdout_file = std.io.getStdOut().writer();
-    var bw = std.io.bufferedWriter(stdout_file);
-    const stdout = bw.writer();
-
-    try stdout.print("Run `zig build test` to run the tests.\n", .{});
-
-    try bw.flush(); // don't forget to flush!
+fn fizz_buzz(allocator: std.mem.Allocator, n: u64) ![]const u8 {
+    if (n % 3 == 0 and n % 5 == 0) {
+        return allocator.dupe(u8, "FizzBuzz");
+    } else if (n % 3 == 0) {
+        return allocator.dupe(u8, "Fizz");
+    } else if (n % 5 == 0) {
+        return allocator.dupe(u8, "Buzz");
+    } else {
+        return std.fmt.allocPrint(allocator, "{}", .{n});
+    }
 }
 
-test "simple test" {
-    var list = std.ArrayList(i32).init(std.testing.allocator);
-    defer list.deinit(); // try commenting this out and see if zig detects the memory leak!
-    try list.append(42);
-    try std.testing.expectEqual(@as(i32, 42), list.pop());
+pub fn main() !void {
+    const allocator = std.heap.page_allocator;
+
+    for (0..100) |i| {
+        var n = i + 1;
+
+        const result = try fizz_buzz(allocator, n);
+        defer allocator.free(result);
+        try std.io.getStdOut().writeAll(result);
+        try std.io.getStdOut().writeAll("\n");
+    }
 }

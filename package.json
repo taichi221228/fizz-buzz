@@ -9,7 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "nim c -o:nim/nim --verbosity:0 nim/main.nim & (cd rust && cargo build)",
+    "build": "nim c -o:nim/nim --verbosity:0 nim/main.nim & (cd rust && cargo build) & (cd zig && zig build)",
     "format": "deno fmt * --ignore=node_modules"
   }
 }
