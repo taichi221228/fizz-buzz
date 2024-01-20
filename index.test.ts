@@ -22,6 +22,6 @@ test("Lisp", handler(["clisp", "lisp/main.lisp"]));
 
 test("Haskell", handler(["runghc", "haskell/main.hs"]));
 
-test("Nim", handler(["./nim/fizz-buzz"]));
+test("Nim", handler(["./nim/nim"]));
 
-test("Rust", handler(["./rust/target/debug/fizz-buzz"]));
+test("Rust", handler(["./rust/target/debug/rust"]));
