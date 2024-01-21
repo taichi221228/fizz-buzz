@@ -9,7 +9,8 @@ fn main() {
     let mut i = 1;
     loop {
         println!("{}", fizz_buzz(i));
+
         if i == 100 { break }
-        i += 1;
+        else { i += 1 }
     }
 }
