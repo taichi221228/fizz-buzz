@@ -1,0 +1,9 @@
+name: crystal
+version: 0.1.0
+
+authors:
+  - taichi221228 <taichi221228@icloud.com>
+
+crystal: '>= 1.11.2'
+
+license: MIT
