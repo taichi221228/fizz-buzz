@@ -29,3 +29,5 @@ test("Crystal", handler(["./crystal/crystal"]));
 test("Rust", handler(["./rust/target/debug/rust"]));
 
 test("Zig", handler(["./zig/zig-out/bin/zig"]));
+
+test("Onyx", handler(["wasmer", "./onyx/onyx.wasm"]))
