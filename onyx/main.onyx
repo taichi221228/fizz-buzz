@@ -1,5 +1,19 @@
-use core {printf}
+use core {println, conv}
+
+fizz_buzz :: (n: i32) -> #auto {
+    if n % 3 == 0 && n % 5 == 0 {
+        return "FizzBuzz";
+    } elseif n % 3 == 0 {
+        return "Fizz";
+    } elseif n % 5 == 0 {
+        return "Buzz";
+    } else {
+        return conv.format("{}", n);
+    }
+}
 
 main :: () {
-    printf("Hello, Onyx!\n");
+    for 1..101 {
+        println(fizz_buzz(it));
+    }
 }
