@@ -9,7 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "nim c -o:nim/nim --verbosity:0 nim/main.nim & (cd crystal && crystal build src/crystal.cr) & (cd rust && cargo build) & (cd zig && zig build) & (cd onyx && onyx build -r wasi -o onyx.wasm main.onyx)",
+    "build": "nim c -o:nim/nim --verbosity:0 nim/main.nim & (cd crystal && crystal build src/crystal.cr) & (cd rust && cargo build) & (cd zig && zig build) & (cd onyx && onyx build -o onyx.wasm main.onyx)",
     "format": "deno fmt * --ignore=node_modules"
   }
 }
