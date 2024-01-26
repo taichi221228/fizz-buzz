@@ -20,7 +20,7 @@ test("TypeScript", handler(["bun", "typescript/index.ts"]));
 
 test("Lisp", handler(["clisp", "lisp/main.lisp"]));
 
-test("Haskell", handler(["runghc", "haskell/main.hs"]));
+test("Haskell", handler(["./haskell/haskell"]));
 
 test("Nim", handler(["./nim/nim"]));
 
