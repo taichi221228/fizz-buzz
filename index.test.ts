@@ -28,6 +28,6 @@ test("Crystal", handler(["./crystal/crystal"]));
 
 test("Rust", handler(["./rust/target/debug/rust"]));
 
-test("Zig", handler(["./zig/zig-out/bin/zig"]));
+test("Zig", handler(["./zig/zig"]));
 
 test("Onyx", handler(["onyx", "run", "./onyx/onyx.wasm"]))
