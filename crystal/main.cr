@@ -1,21 +1,20 @@
-def fizzBuzz(n : Int32) : Int32 | String
-  if (n % 3 == 0 && n % 5 == 0)
-    "FizzBuzz"
-  elsif (n % 3 == 0)
-    "Fizz"
-  elsif (n % 5 == 0)
-    "Buzz"
-  else
-    n
+module FizzBuzz
+  def fizzBuzz : String
+    case
+    when self % 15 == 0 then "FizzBuzz"
+    when self % 3  == 0 then "Fizz"
+    when self % 5  == 0 then "Buzz"
+    else self.to_s
+    end
   end
 end
 
-module Crystal
-  n = 1
-  while true
-    puts fizzBuzz(n)
+struct Int32
+  include FizzBuzz
+end
 
-    break if (n == 100)
-    n += 1
+module Crystal
+  1.upto(100) do |i|
+    puts i.fizzBuzz
   end
 end
