@@ -1,10 +1,12 @@
 const fizzBuzz = (n) =>
-  (n % 3 === 0 && n % 5 === 0)
+  n % 15 === 0
     ? "FizzBuzz"
-    : (n % 3 === 0)
+    : n % 3 === 0
     ? "Fizz"
-    : (n % 5 === 0)
+    : n % 5 === 0
     ? "Buzz"
-    : `${n}`;
+    : String(n);
 
-[...Array(100).keys()].forEach((i) => console.log(fizzBuzz(i + 1)));
+Array.from({ length: 100 }, (_, i) => ++i).forEach((n) =>
+  console.log(fizzBuzz(n))
+);
