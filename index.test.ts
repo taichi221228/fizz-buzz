@@ -26,7 +26,7 @@ test("Nim", handler(["./nim/nim"]));
 
 test("Crystal", handler(["./crystal/crystal"]));
 
-test("Rust", handler(["./rust/target/debug/rust"]));
+test("Rust", handler(["./rust/rust"]));
 
 test("Zig", handler(["./zig/zig"]));
 
