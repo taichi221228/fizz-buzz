@@ -13,8 +13,6 @@ struct Int32
   include FizzBuzz
 end
 
-module Crystal
-  1.upto(100) do |i|
-    puts i.fizzBuzz
-  end
+1.upto(100) do |i|
+  puts i.fizzBuzz
 end
