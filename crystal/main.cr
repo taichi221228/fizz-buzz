@@ -1,7 +1,7 @@
 module FizzBuzz
   def fizzBuzz : String
     case
-    when self % 3 == 0 && self % 5 == 0 then "FizzBuzz"
+    when self % 15 == 0 then "FizzBuzz"
     when self % 3  == 0 then "Fizz"
     when self % 5  == 0 then "Buzz"
     else self.to_s
