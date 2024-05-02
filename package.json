@@ -9,7 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "(cd crystal && crystal build -o crystal main.cr) & (cd haskell && ghc -o haskell main.hs) & (cd nim && nim c -o:nim --verbosity:0 main.nim) & (cd onyx && onyx build -o onyx.wasm main.onyx) & (cd rust && rustc -o rust main.rs) & (cd zig && zig build-exe --name zig main.zig)",
+    "build": "(cd go && go build -o go main.go) & (cd crystal && crystal build -o crystal main.cr) & (cd haskell && ghc -o haskell main.hs) & (cd nim && nim c -o:nim --verbosity:0 main.nim) & (cd onyx && onyx build -o onyx.wasm main.onyx) & (cd rust && rustc -o rust main.rs) & (cd zig && zig build-exe --name zig main.zig)",
     "format": "deno fmt * --ignore=node_modules"
   }
 }

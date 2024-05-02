@@ -24,6 +24,8 @@ test("Haskell", handler(["haskell/haskell"]));
 
 test("Elixir", handler(["elixir", "elixir/main.exs"]));
 
+test("Go", handler(["go/go"]));
+
 test("Nim", handler(["nim/nim"]));
 
 test("Crystal", handler(["crystal/crystal"]));
